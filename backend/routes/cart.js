@@ -1,8 +1,8 @@
 
 const express =require("express")
 const router=express.Router()
-const Cart = require("../models/Cart.js")
-const Product = require("../models/Product.js") 
+const Cart = require("../Models/Cart.js")
+const Product = require("../Models/Product.js") 
 
 const isAuthenticated=(req,res,next)=>{
     const userId= req.query.userId 

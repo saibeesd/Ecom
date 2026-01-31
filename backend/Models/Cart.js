@@ -7,7 +7,7 @@ const cartItemSchema=mongoose.Schema({
     product:{
         type:Schema.Types.ObjectId,ref:"Product",require:true
     },
-    quantity:{
+    quantity:{    
         type:Number,
         require:true
     }

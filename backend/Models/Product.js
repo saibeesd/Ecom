@@ -7,7 +7,7 @@ const Product= mongoose.Schema({
     price:{
         type:String
     },
-    description:{
+    description:{    
         type:String
     },
     category:{

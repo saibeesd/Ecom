@@ -1,6 +1,6 @@
 const express = require("express")
 const router= express.Router()
-const Product =require("../models/Product.js")
+const Product =require("../Models/Product.js")
 
 const isAdmin=(req,res,next)=>{
     const {role}= req.body

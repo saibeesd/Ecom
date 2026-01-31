@@ -9,7 +9,7 @@ const User=mongoose.Schema({
     },
     password:{
         type:String
-    },
+    },    
     mobile:{
         type:Number
     },
