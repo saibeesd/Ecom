@@ -14,7 +14,7 @@ export default function Cart() {
   }, [])
 
   function fetchCart() {
-    axios.get("http://localhost:4000/api/cart", {
+    axios.get("https://ecom-1-zyik.onrender.com/api/cart", {
       params: { userId }
     })
     .then(res => {
@@ -31,7 +31,7 @@ export default function Cart() {
     if (quantity < 1) return
 
     axios.put(
-      "http://localhost:4000/api/cart/update",
+      "https://ecom-1-zyik.onrender.com/api/cart/update",
       { productId, quantity },
       { params: { userId } }
     )
@@ -41,7 +41,7 @@ export default function Cart() {
 
   function removeFromCart(productId) {
     axios.delete(
-      "http://localhost:4000/api/cart/remove",
+      "https://ecom-1-zyik.onrender.com/api/cart/remove",
       { params: { userId, productId } }
     )
     .then(() => fetchCart())
