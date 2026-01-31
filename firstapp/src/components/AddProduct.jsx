@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 export default function AddProduct() {
     const [name,setName]=useState("")
     const [price,setPrice]=useState("")
@@ -19,14 +20,25 @@ export default function AddProduct() {
           .then((res)=>{
             console.log(res)
             if(res.status==200){
-              alert("Product added successfull")
+              alert("")
+              Swal.fire({
+  title: "Good job!",
+  text: "You clicked the button!",
+  icon: "success"
+});
               navigate("/")
             }
           })
           .catch((err)=>{
-            alert(err.response.data.message)
+            alert()
+            Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Something went wrong!",
+  footer: '<a href="#">Why do I have this issue?</a>'
+});
           })
-    }
+    } 
 
     return (
         <div className='container mt-4'>

@@ -1,5 +1,7 @@
 
 const mongoose =require("mongoose")
+const { Schema } = mongoose;
+
 
 const cartItemSchema=mongoose.Schema({
     product:{
@@ -13,7 +15,7 @@ const cartItemSchema=mongoose.Schema({
 
 const cartSchema=mongoose.Schema({
     user:{
-        type:SchemaTypes.Types.ObjectId, ref:"User"
+        type:Schema.Types.ObjectId, ref:"User"
     },
     items:[cartItemSchema]
 })

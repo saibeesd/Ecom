@@ -25,7 +25,13 @@ export default function Login() {
         navigate("/")
       }
     } catch (err) {
-      alert(err.response?.data?.message || "Login failed")
+      Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Something went wrong!",
+  footer: '<a href="#">Why do I have this issue?</a>'
+});
+
     }
   }
 
